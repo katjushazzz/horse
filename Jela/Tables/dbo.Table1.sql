@@ -8,3 +8,4 @@ CREATE TABLE [dbo].[Table1] (
 GO
 ALTER TABLE [dbo].[Table1] SET (LOCK_ESCALATION = TABLE)
 GO
+
