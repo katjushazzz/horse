@@ -1,13 +1,12 @@
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
-SET ANSI_PADDING ON
+SET ANSI_PADDING OFF
 GO
 CREATE TABLE [dbo].[History] (
 		[HistoryID]          [uniqueidentifier] NOT NULL,
 		[ReportID]           [uniqueidentifier] NOT NULL,
 		[SnapshotDataID]     [uniqueidentifier] NOT NULL,
 		[SnapshotDate]       [datetime] NOT NULL,
-		[Test]               [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_History]
 		PRIMARY KEY
 		NONCLUSTERED
