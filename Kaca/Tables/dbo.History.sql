@@ -8,7 +8,7 @@ CREATE TABLE [dbo].[History] (
 		[SnapshotDataID]     [uniqueidentifier] NOT NULL,
 		[SnapshotDate]       [datetime] NOT NULL,
 		[Test]               [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[Test23]             [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[Test2]              [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_History]
 		PRIMARY KEY
 		NONCLUSTERED
