@@ -7,7 +7,7 @@ CREATE TABLE [dbo].[History] (
 		[ReportID]           [uniqueidentifier] NOT NULL,
 		[SnapshotDataID]     [uniqueidentifier] NOT NULL,
 		[SnapshotDate]       [datetime] NOT NULL,
-		[Test9]              [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+
 		[Test24]             [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK_History]
 		PRIMARY KEY
@@ -26,3 +26,4 @@ CREATE NONCLUSTERED INDEX [IX_SnapshotDataID]
 GO
 ALTER TABLE [dbo].[History] SET (LOCK_ESCALATION = TABLE)
 GO
+
