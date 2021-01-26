@@ -1,2 +1,0 @@
-bash username: user
-bash password: password1
