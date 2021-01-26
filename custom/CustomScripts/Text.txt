@@ -1,0 +1,2 @@
+bash username: user
+bash password: password
