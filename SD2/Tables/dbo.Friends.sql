@@ -4,8 +4,8 @@ SET ANSI_PADDING ON
 GO
 CREATE TABLE [dbo].[Friends] (
 		[FriendID]     [int] IDENTITY(1, 1) NOT NULL,
-		[Name2]        [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
-		[Surname2]     [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[Name]         [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+		[Surname]      [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK__Friends__A2CF6563A4A157C1]
 		PRIMARY KEY
 		CLUSTERED
