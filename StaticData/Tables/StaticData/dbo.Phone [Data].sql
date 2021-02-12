@@ -1,5 +1,5 @@
 SET IDENTITY_INSERT [dbo].[Phone] ON
-INSERT INTO [dbo].[Phone] ([UserID], [Name], [Surname], [Street], [City], [Home_phone], [Mobile_phone]) VALUES (1, N'Kelly', N'Peck', N'3970 Alfred Drive', N'New York', N'7182199038', N'3472415293')
+INSERT INTO [dbo].[Phone] ([UserID], [Name], [Surname], [Street], [City], [Home_phone], [Mobile_phone]) VALUES (1, N'katjusha', N'Peck', N'3970 Alfred Drive', N'New York', N'7182199038', N'3472415293')
 INSERT INTO [dbo].[Phone] ([UserID], [Name], [Surname], [Street], [City], [Home_phone], [Mobile_phone]) VALUES (2, N'Iyana', N'Reed', N'4032 Lindale Avenue', N'Hayward', N'5105660193', N'5107066454')
 INSERT INTO [dbo].[Phone] ([UserID], [Name], [Surname], [Street], [City], [Home_phone], [Mobile_phone]) VALUES (3, N'Rylee', N'Schultz', N'3743 Hershell Hollow Road', N'Johnson City', N'4239529283', N'4232139018')
 INSERT INTO [dbo].[Phone] ([UserID], [Name], [Surname], [Street], [City], [Home_phone], [Mobile_phone]) VALUES (4, N'Ralph', N'Contreras', N'4029 Trouser Leg Road', N'Greenfield', N'4137747817', N'4138346788')
