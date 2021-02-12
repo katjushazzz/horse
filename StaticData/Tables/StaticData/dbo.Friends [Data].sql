@@ -1,6 +1,6 @@
 SET IDENTITY_INSERT [dbo].[Friends] ON
 INSERT INTO [dbo].[Friends] ([FriendID], [Name1], [Surname1]) VALUES (1, N'Kaca', N'Peck')
-INSERT INTO [dbo].[Friends] ([FriendID], [Name1], [Surname1]) VALUES (2, N'Mariah', N'Salas')
+INSERT INTO [dbo].[Friends] ([FriendID], [Name1], [Surname1]) VALUES (2, N'Mara', N'Salas')
 INSERT INTO [dbo].[Friends] ([FriendID], [Name1], [Surname1]) VALUES (3, N'Crystal', N'Sparks')
 INSERT INTO [dbo].[Friends] ([FriendID], [Name1], [Surname1]) VALUES (4, N'Braiden', N'Mora')
 INSERT INTO [dbo].[Friends] ([FriendID], [Name1], [Surname1]) VALUES (5, N'Larry', N'Maddox')
