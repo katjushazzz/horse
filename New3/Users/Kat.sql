@@ -1,4 +1,0 @@
-CREATE USER [Kat]
-	FOR LOGIN [Kat]
-	WITH DEFAULT_SCHEMA = [dbo]
-GO
