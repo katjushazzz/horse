@@ -1,4 +1,0 @@
-CREATE USER [sa1]
-	FOR LOGIN [sa1]
-	WITH DEFAULT_SCHEMA = [dbo]
-GO
