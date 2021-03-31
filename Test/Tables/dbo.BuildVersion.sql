@@ -7,10 +7,6 @@ CREATE TABLE [dbo].[BuildVersion] (
 		[Database Version]        [nvarchar](25) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 		[VersionDate]             [datetime] NOT NULL,
 		[ModifiedDate]            [datetime] NOT NULL,
-		[Test]                    [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[Test2]                   [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[Test3]                   [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[Test4]                   [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK__BuildVer__35E58ECA3E3DE933]
 		PRIMARY KEY
 		CLUSTERED
