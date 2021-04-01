@@ -9,7 +9,7 @@ CREATE TABLE [SalesLT].[Address] (
 		[City]              [nvarchar](30) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 		[StateProvince]     [dbo].[Name] NOT NULL,
 		[CountryRegion]     [dbo].[Name] NOT NULL,
-		[PostalCode]        [nvarchar](15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+		[PostalCode1]        [nvarchar](15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 		[rowguid]           [uniqueidentifier] NOT NULL,
 		[ModifiedDate]      [datetime] NOT NULL,
 		CONSTRAINT [AK_Address_rowguid]
