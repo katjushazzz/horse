@@ -11,7 +11,7 @@ CREATE TABLE [SalesLT].[Address] (
 		[CountryRegion]     [dbo].[Name] NOT NULL,
 		[PostalCode]        [nvarchar](15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 		[rowguid]           [uniqueidentifier] NOT NULL,
-		[ModifiedDate1]     [datetime] NOT NULL,
+		[ModifiedDate]     [datetime] NOT NULL,
 		CONSTRAINT [AK_Address_rowguid]
 		UNIQUE
 		NONCLUSTERED
