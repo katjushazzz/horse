@@ -11,7 +11,8 @@ CREATE TABLE [dbo].[authors] (
 		[city]         [varchar](20) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[state]        [char](2) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[zip]          [char](5) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
-		[contract]     [bit] NOT NULL
+		[contract]     [bit] NOT NULL,
+		[Test]         [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL
 )
 GO
 ALTER TABLE [dbo].[authors]
