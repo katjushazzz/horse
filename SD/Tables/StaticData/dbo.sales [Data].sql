@@ -1,4 +1,4 @@
-INSERT INTO [dbo].[sales] ([stor_id], [ord_num], [title_id], [ord_date], [qty], [payterms], [Test]) VALUES ('6380', '6871', 'BU1032', '19940914 00:00:00.000', 5, 'Net 606', N'kaca      ')
+INSERT INTO [dbo].[sales] ([stor_id], [ord_num], [title_id], [ord_date], [qty], [payterms], [Test]) VALUES ('6380', '6871', 'BU1032', '19940914 00:00:00.000', 5, 'Net 60', N'kacusa')
 INSERT INTO [dbo].[sales] ([stor_id], [ord_num], [title_id], [ord_date], [qty], [payterms], [Test]) VALUES ('6380', '722a', 'PS2091', '19940913 00:00:00.000', 3, 'Net 60', NULL)
 INSERT INTO [dbo].[sales] ([stor_id], [ord_num], [title_id], [ord_date], [qty], [payterms], [Test]) VALUES ('7066', 'A2976', 'PC8888', '19930524 00:00:00.000', 50, 'Net 30', NULL)
 INSERT INTO [dbo].[sales] ([stor_id], [ord_num], [title_id], [ord_date], [qty], [payterms], [Test]) VALUES ('7066', 'QA7442.3', 'PS2091', '19940913 00:00:00.000', 75, 'ON invoice', NULL)
