@@ -1,0 +1,4 @@
+CREATE USER [Kaca2]
+	FOR LOGIN [Kaca2]
+	WITH DEFAULT_SCHEMA = [dbo]
+GO
