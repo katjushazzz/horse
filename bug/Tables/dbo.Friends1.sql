@@ -2,7 +2,7 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 SET ANSI_PADDING ON
 GO
-CREATE TABLE [dbo].[Friends] (
+CREATE TABLE [dbo].[Friends1] (
 		[FriendID]     [int] IDENTITY(1, 1) NOT NULL,
 		[Name]         [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 		[Surname]      [nvarchar](50) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
@@ -13,5 +13,5 @@ CREATE TABLE [dbo].[Friends] (
 	ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[Friends] SET (LOCK_ESCALATION = TABLE)
+ALTER TABLE [dbo].[Friends1] SET (LOCK_ESCALATION = TABLE)
 GO
