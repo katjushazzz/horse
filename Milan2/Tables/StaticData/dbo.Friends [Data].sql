@@ -1,5 +1,5 @@
 SET IDENTITY_INSERT [dbo].[Friends] ON
-INSERT INTO [dbo].[Friends] ([FriendID], [Name], [Surname], [Test1]) VALUES (1, N'Kelly', N'Peck', NULL)
+INSERT INTO [dbo].[Friends] ([FriendID], [Name], [Surname], [Test1]) VALUES (1, N'Kelly', N'Peck', N'kaca      ')
 INSERT INTO [dbo].[Friends] ([FriendID], [Name], [Surname], [Test1]) VALUES (2, N'Mariah', N'Salas', NULL)
 INSERT INTO [dbo].[Friends] ([FriendID], [Name], [Surname], [Test1]) VALUES (3, N'Crystal', N'Sparks', NULL)
 INSERT INTO [dbo].[Friends] ([FriendID], [Name], [Surname], [Test1]) VALUES (4, N'Braiden', N'Mora', NULL)

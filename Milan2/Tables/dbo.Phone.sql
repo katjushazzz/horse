@@ -10,6 +10,7 @@ CREATE TABLE [dbo].[Phone] (
 		[City]             [nvarchar](30) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 		[Home_phone]       [nvarchar](25) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[Mobile_phone]     [nvarchar](25) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+		[Test]             [nchar](10) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		CONSTRAINT [PK__Phone__1788CCAC1F3C8C85]
 		PRIMARY KEY
 		CLUSTERED
