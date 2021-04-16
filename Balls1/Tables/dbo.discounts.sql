@@ -13,7 +13,7 @@ GO
 ALTER TABLE [dbo].[discounts]
 	WITH CHECK
 	ADD CONSTRAINT [FK__discounts__stor___4F7CD00D]
-	FOREIGN KEY ([stor_id]) REFERENCES [dbo].[stores1] ([stor_id])
+	FOREIGN KEY ([stor_id]) REFERENCES [dbo].[stores] ([stor_id])
 ALTER TABLE [dbo].[discounts]
 	CHECK CONSTRAINT [FK__discounts__stor___4F7CD00D]
 

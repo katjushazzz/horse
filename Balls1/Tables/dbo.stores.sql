@@ -2,7 +2,7 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 SET ANSI_PADDING ON
 GO
-CREATE TABLE [dbo].[stores1] (
+CREATE TABLE [dbo].[stores] (
 		[stor_id]          [char](4) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 		[stor_name]        [varchar](40) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
 		[stor_address]     [varchar](40) COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
@@ -16,5 +16,5 @@ CREATE TABLE [dbo].[stores1] (
 	ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-ALTER TABLE [dbo].[stores1] SET (LOCK_ESCALATION = TABLE)
+ALTER TABLE [dbo].[stores] SET (LOCK_ESCALATION = TABLE)
 GO
