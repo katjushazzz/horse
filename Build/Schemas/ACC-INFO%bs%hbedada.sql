@@ -1,0 +1,3 @@
+CREATE SCHEMA [ACC-INFO\hbedada]
+	AUTHORIZATION [dbo]
+GO

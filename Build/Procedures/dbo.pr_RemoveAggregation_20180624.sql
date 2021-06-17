@@ -1,0 +1,63 @@
+SET ANSI_NULLS ON
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+
+	CREATE PROCEDURE [dbo].[pr_RemoveAggregation_20180624]
+	(
+		@AGGREGATIONKEY INT,
+		@REMOVEFROMAGGDIM BIT = 0
+	)
+	AS
+	DECLARE
+		@UDFERRORMESSAGE VARCHAR(300)
+	BEGIN
+		BEGIN TRY
+		/*!!! 2016-11-14  Nigus: Switch partition is moving all partitions instead of partitions we want to remove. So as a workaround, I have added 'DELETE' statements and commented out
+		the switch partition executions */
+		DELETE FROM ClientMetricDM.dbo.AllAggregateSnapshotSUM WHERE AggregationKey = @AGGREGATIONKEY
+		DELETE FROM ClientMetricDM.dbo.CLIENTFCT WHERE AggregationKey = @AGGREGATIONKEY
+		DELETE FROM ClientMetricDM.dbo.CLIENTSNAPSHOTSUM WHERE AggregationKey = @AGGREGATIONKEY
+		DELETE FROM ClientMetricDM.dbo.SUBMISSIONSNAPSHOT WHERE AggregationKey = @AGGREGATIONKEY
+		DELETE FROM ClientMetricDM.dbo.ComparisonGroupSnapshotDTL WHERE AggregationKey = @AGGREGATIONKEY
+		DELETE FROM ClientMetricDM.dbo.COMPARISONGROUPSNAPSHOTSUM WHERE AggregationKey = @AGGREGATIONKEY
+		--DELETE FROM ClientMetricDM.dbo.EPISODEOUTCOMESFCT WHERE AggregationKey = @AGGREGATIONKEY
+		--DELETE FROM ClientMetricDM.dbo.VISITOUTCOMESFCT WHERE AggregationKey = @AGGREGATIONKEY
+		--DELETE FROM ClientMetricDM.dbo.PASDefectOutcomesFCT WHERE AggregationKey = @AGGREGATIONKEY
+		--DELETE FROM ClientMetricDM.dbo.AorticBalloonOutcomesFCT WHERE AggregationKey = @AGGREGATIONKEY
+			-- SWITCH OUT PARTITIONS
+			/*
+			EXEC [dbo].[pr_SwitchPartition] @AGGREGATIONKEY, 'IMPACTDMAGG', 'DBO', 'ALLAGGREGATESNAPSHOTSUM'
+			EXEC [dbo].[pr_SwitchPartition] @AGGREGATIONKEY, 'IMPACTDMAGG', 'DBO', 'CLIENTFCT'
+			EXEC [dbo].[pr_SwitchPartition] @AGGREGATIONKEY, 'IMPACTDMAGG', 'DBO', 'CLIENTSNAPSHOTSUM'
+			EXEC [dbo].[pr_SwitchPartition] @AGGREGATIONKEY, 'IMPACTDMAGG', 'DBO', 'SUBMISSIONSNAPSHOT'
+			EXEC [dbo].[pr_SwitchPartition] @AGGREGATIONKEY, 'IMPACTDMAGG', 'DBO', 'ComparisonGroupSnapshotDTL'
+			EXEC [dbo].[pr_SwitchPartition] @AGGREGATIONKEY, 'IMPACTDMAGG', 'DBO', 'COMPARISONGROUPSNAPSHOTSUM'
+			EXEC [dbo].[pr_SwitchPartition] @AGGREGATIONKEY, 'IMPACTDMAGG', 'DBO', 'EPISODEOUTCOMESFCT'
+			EXEC [dbo].[pr_SwitchPartition] @AGGREGATIONKEY, 'IMPACTDMAGG', 'DBO', 'VISITOUTCOMESFCT'
+			EXEC [dbo].[pr_SwitchPartition] @AGGREGATIONKEY, 'IMPACTDMAGG', 'DBO', 'PASDefectOutcomesFCT'
+			*/
+			-- IF SET, THEN ALSO REMOVE THIS FROM THE AGGREGATION DIM
+			IF(@REMOVEFROMAGGDIM = 1)
+			BEGIN
+				DELETE FROM ClientMetricDM.DBO.AGGREGATIONDIM WHERE AGGREGATIONKEY = @AGGREGATIONKEY
+			END
+		END TRY
+
+		BEGIN CATCH
+			-- STANDARD ROUTINE TO CATCH/LOG ERROR
+			SELECT @UDFERRORMESSAGE = ERROR_MESSAGE()
+			
+			RAISERROR (@UDFERRORMESSAGE,
+				16, -- SEVERITY.
+				1 -- STATE.
+			)
+			
+			RETURN -1
+		END CATCH
+	END
+	
+
+GO

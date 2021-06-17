@@ -1,0 +1,2 @@
+CREATE ROLE [db_ShowPlanAll] AUTHORIZATION [dbo]
+GO
